@@ -1,1 +1,2 @@
-# crud-mean-stack
+# CrudMongo
+Express, MongoDB, Ejs
