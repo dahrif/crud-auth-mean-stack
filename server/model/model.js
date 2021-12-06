@@ -1,7 +1,7 @@
 'use strict';
 
 //DB Schema
-const {Schema,model} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 const UsersSchema = new Schema({
     username: {
