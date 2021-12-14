@@ -1,2 +1,0 @@
-# CrudMongo
-Express, MongoDB, Ejs
