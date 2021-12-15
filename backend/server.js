@@ -16,12 +16,12 @@ const dbConfig = require('./app/config/db.config');
 const Role = db.role;
 
 db.mongoose
-  .connect(dbConfig.HOST, {
+  .connect(dbConfig.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
   .then( () => {
-    console.log("Successfully coonnected to mongoDB.");
+    console.log("Successfully connected to mongoDB.");
     initial();
   })
   .catch(err => {
@@ -65,9 +65,10 @@ app.get("/", (req, res) => {
 
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+require("./app/routes/members.routes")(app);
 
 // Set port and start server
-const PORT = process.env.PORT || 8001;
+const PORT = 8001;
 
 app.listen(PORT, () => {
   console.log(`Server is on port ${PORT}.`)
