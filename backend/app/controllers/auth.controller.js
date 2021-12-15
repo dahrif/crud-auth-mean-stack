@@ -36,7 +36,7 @@ exports.signup = (req, res) => {
               return
             }
 
-            res.send({ message: "User was registered succefully!" });
+            res.send({ message: "Admin was registered succefully!" });
           });
         }
       );
@@ -54,7 +54,7 @@ exports.signup = (req, res) => {
           return;
         }
 
-        res.send({ message: "User was registered succefully!" });
+        res.send({ message: "Admin was registered succefully!" });
         });
       });
     }
