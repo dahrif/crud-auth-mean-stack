@@ -14,6 +14,7 @@ import { UserComponent } from './_components/user/user.component';
 import { AuthInterceptorProviders } from './_helpers/auth.interceptor';
 import { AddMemberComponent } from './_components/add-member/add-member.component';
 import { MembersListComponent } from './_components/members-list/members-list.component';
+import { MemberDetailsComponent } from './_components/member-details/member-details.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { MembersListComponent } from './_components/members-list/members-list.co
     UserComponent,
     AddMemberComponent,
     MembersListComponent,
+    MemberDetailsComponent,
   ],
   imports: [
     BrowserModule,

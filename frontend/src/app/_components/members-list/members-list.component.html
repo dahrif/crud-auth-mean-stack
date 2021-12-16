@@ -1,12 +1,7 @@
 <div class="list row">
     <div class="col-md-8">
         <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search by username"
-              [(ngModel)]="username"
-            />
+            <input type="text" class="form-control" placeholder="Search by username" [(ngModel)]="username" />
             <div class="input-group-append">
               <button
                 class="btn btn-outline-secondary"
@@ -31,12 +26,12 @@
         <tr *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMember(member, i)">
           <td>{{ member.username}}</td>
           <td>{{ member.email}}</td>
-          <td><a class="badge badge-warning" routerLink="/tutorials/{{ currentMember.id }}"> Edit </a> </td>
+          <!-- <td><a  class="badge badge-warning" routerLink="/members/{{ currentMember._id }}" > Edit </a></td> -->
         </tr>
       </tbody>
     </table>
 
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMembers()">
+    <button class="m-3 btn btn-danger" (click)="removeAllMembers()">
       Remove All
     </button>
 

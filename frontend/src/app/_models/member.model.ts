@@ -1,5 +1,5 @@
 export class Member {
-    id?:any;
+    _id?:any;
     username?: string;
     email?: string;
     password?: string;

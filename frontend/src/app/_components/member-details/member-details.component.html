@@ -1,0 +1,29 @@
+<div>
+    <div *ngIf="currentMember._id" class="edit-form">
+      <h4>Member</h4>
+      <form>
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="currentMember.username" name="username"/>
+        </div>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input type="text" class="form-control" id="email" [(ngModel)]="currentMember.email" name="email" />
+        </div>
+      </form>
+  
+      <button class="badge badge-danger mr-2" (click)="deleteMember()">
+        Delete
+      </button>
+  
+      <button type="submit" class="badge badge-success mb-2" (click)="updateMember()">
+        Update
+      </button>
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentMember._id">
+      <br />
+      <p>Cannot access this Member...</p>
+    </div>
+  </div>
