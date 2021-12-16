@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Member } from 'src/app/_models/member.model';
+import { MemberService } from 'src/app/_services/member.service';
 
 @Component({
   selector: 'app-add-member',
@@ -7,9 +9,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddMemberComponent implements OnInit {
 
-  constructor() { }
+  member: Member = {
+    username: '',
+    email: '',
+    password: ''
+  };
+  submitted = false;
 
-  ngOnInit() {
+  constructor( private memberService: MemberService) { }
+
+  ngOnInit(): void { }
+
+  saveMember(): void{
+    const data = {
+      username : this.member.username,
+      email: this.member.email,
+      password: this.member.password
+    };
+
+    this.memberService.create(data)
+    .subscribe(
+      response => {
+        console.log(response);
+        this.submitted = true;
+      },
+      err =>{
+        console.log(err);
+        
+      });
   }
 
+  newMember() : void {
+    this.submitted = false;
+    this.member = {
+      username : '',
+      email: ''
+    };
+  }
 }
