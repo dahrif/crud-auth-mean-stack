@@ -7,7 +7,7 @@ import { TokenStorageService } from './_services/token-storage.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'login-tutorial';
+  title = 'Crud-auth-mean-stack';
 
   private roles: string[] = [];
   isLoggedIn = false;

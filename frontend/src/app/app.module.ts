@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { ProfileComponent } from './_components/profile/profile.component';
 import { AdminComponent } from './_components/admin/admin.component';
 import { UserComponent } from './_components/user/user.component';
 import { AuthInterceptorProviders } from './_helpers/auth.interceptor';
+import { AddMemberComponent } from './_components/add-member/add-member.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { AuthInterceptorProviders } from './_helpers/auth.interceptor';
     ProfileComponent,
     AdminComponent,
     UserComponent,
+    AddMemberComponent,
   ],
   imports: [
     BrowserModule,
