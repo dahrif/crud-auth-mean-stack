@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'user', component: UserComponent},
   { path: 'admin', component: AdminComponent},
-  { path: 'add', component: AddMemberComponent},
+  // { path: 'add', component: AddMemberComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

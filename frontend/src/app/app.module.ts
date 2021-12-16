@@ -13,6 +13,7 @@ import { AdminComponent } from './_components/admin/admin.component';
 import { UserComponent } from './_components/user/user.component';
 import { AuthInterceptorProviders } from './_helpers/auth.interceptor';
 import { AddMemberComponent } from './_components/add-member/add-member.component';
+import { MembersListComponent } from './_components/members-list/members-list.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AddMemberComponent } from './_components/add-member/add-member.componen
     AdminComponent,
     UserComponent,
     AddMemberComponent,
+    MembersListComponent,
   ],
   imports: [
     BrowserModule,

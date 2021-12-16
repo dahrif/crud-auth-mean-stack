@@ -1,0 +1,43 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by username"
+              [(ngModel)]="username"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                (click)="searchUsername()"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+    </div>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMember(member, i)">
+          <td>{{ member.username}}</td>
+          <td>{{ member.email}}</td>
+          <td><a class="badge badge-warning" routerLink="/tutorials/{{ currentMember.id }}"> Edit </a> </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMembers()">
+      Remove All
+    </button>
+
+    </div>

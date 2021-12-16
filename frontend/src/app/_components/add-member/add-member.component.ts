@@ -15,6 +15,8 @@ export class AddMemberComponent implements OnInit {
     password: ''
   };
   submitted = false;
+  isFailed = false;
+  errorMessage = '';
 
   constructor( private memberService: MemberService) { }
 
@@ -32,9 +34,12 @@ export class AddMemberComponent implements OnInit {
       response => {
         console.log(response);
         this.submitted = true;
+        this.isFailed = false;
       },
       err =>{
         console.log(err);
+        this.errorMessage = err.error.message;
+        this.isFailed = false;
         
       });
   }
