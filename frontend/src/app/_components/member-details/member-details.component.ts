@@ -52,4 +52,16 @@ export class MemberDetailsComponent implements OnInit {
         });
   }
 
+
+  deleteMember(): void {
+    this.memberService.delete(this.currentMember._id)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.router.navigate(['/members']);
+        },
+        error => {
+          console.log(error);
+        });
+  }
 }

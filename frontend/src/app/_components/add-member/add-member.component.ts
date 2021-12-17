@@ -50,5 +50,6 @@ export class AddMemberComponent implements OnInit {
       username : '',
       email: ''
     };
+    window.location.reload();
   }
 }

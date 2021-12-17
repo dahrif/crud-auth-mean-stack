@@ -15,6 +15,7 @@ import { AuthInterceptorProviders } from './_helpers/auth.interceptor';
 import { AddMemberComponent } from './_components/add-member/add-member.component';
 import { MembersListComponent } from './_components/members-list/members-list.component';
 import { MemberDetailsComponent } from './_components/member-details/member-details.component';
+import { NavbarComponent } from './_components/navbar/navbar.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { MemberDetailsComponent } from './_components/member-details/member-deta
     AddMemberComponent,
     MembersListComponent,
     MemberDetailsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

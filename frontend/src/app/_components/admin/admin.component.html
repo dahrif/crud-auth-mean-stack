@@ -9,7 +9,8 @@
             <img class="img-responsive img-rounded" src="https://cdn-icons.flaticon.com/png/512/3404/premium/3404470.png?token=exp=1637335301~hmac=cf1a1579bb2e74f38d5ae6aa5bd4beab" alt="User picture">
           </div>
           <div class="user-info" >
-            <span class="user-name mt-2">{{currentUser.username}}</span>
+            <span class="user-name mt-2">
+              <a class="text-white" routerLink="/profile">{{currentUser.username}}</a> </span>
             <span class="user-role">Administrator</span>
           </div>
         </div>
@@ -33,7 +34,7 @@
               <span>Extra</span>
             </li>
             <li>
-              <a routerLink="/products" >
+              <a routerLink="/home" >
                 <i class="fa fa-archive"></i>
                 <span>Stock</span>
               </a>
@@ -59,7 +60,6 @@
     <main class="page-content">
       <div class="container">
         <div class="row">
-            <app-add-member></app-add-member>
             <app-members-list></app-members-list>
         </div>
       </div>

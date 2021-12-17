@@ -1,15 +1,11 @@
 <div class="list row">
-    <div class="col-md-8">
+    <div class="col">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Search by username" [(ngModel)]="username" />
             <div class="input-group-append">
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                (click)="searchUsername()"
-              >
-                Search
-              </button>
+              <button class="btn btn-outline-secondary" type="button" (click)="searchUsername()" > Search </button>
+            </div>
+            <div class="mx-5">            <app-add-member></app-add-member>
             </div>
           </div>
     </div>
@@ -34,5 +30,27 @@
     <button class="m-3 btn btn-danger" (click)="removeAllMembers()">
       Remove All
     </button>
+
+    <div class="col-md-6">
+      <div *ngIf="currentMember._id">
+        <h4>Tutorial</h4>
+        <div>
+          <label><strong>username</strong></label> {{ currentMember.username }}
+        </div>
+        <div>
+          <label><strong>email</strong></label>
+          {{ currentMember.email }}
+        </div>
+  
+        <a class="badge badge-warning" routerLink="/members/{{ currentMember._id }}">
+          Edit
+        </a>
+      </div>
+  
+      <div *ngIf="!currentMember">
+        <br />
+        <p>Please click on a Tutorial...</p>
+      </div>
+    </div>
 
     </div>

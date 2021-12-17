@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Member } from 'src/app/_models/member.model';
 import { MemberService } from 'src/app/_services/member.service';
+import { TokenStorageService } from 'src/app/_services/token-storage.service';
+import { UserService } from 'src/app/_services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-members-list',
@@ -14,10 +17,27 @@ export class MembersListComponent implements OnInit {
   currentIndex = -1;
   username = '';
 
-  constructor(private memberService: MemberService) { }
+  constructor(private memberService: MemberService, private tokenStorageService: TokenStorageService,private userService: UserService,private router : Router) { }
 
   ngOnInit() : void{
     this.retrieveMembers();
+
+    this.currentMember = this.tokenStorageService.getUser();
+
+    this.userService.getAdminBoard().subscribe(
+      data => {
+        this.members = data;
+      },
+      err => {
+        this.router.navigate(['/login'])
+         return false
+      }
+    );
+  }
+
+  logout(): void{
+    this.tokenStorageService.signOut();
+    window.location.reload();
   }
 
   retrieveMembers(): void {
@@ -48,6 +68,7 @@ export class MembersListComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
+          this.logout();
           this.refreshList();
         },
         error => {
