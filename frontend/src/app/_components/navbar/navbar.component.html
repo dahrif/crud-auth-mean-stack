@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
-    <a href="#" class="navbar-brand">MyApp</a>
+
+    <a routerLink="/home" class="navbar-brand">MyApp</a>
+
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
-      <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
-      </li>
       <li class="nav-item" *ngIf="showAdminBoard">
         <a class="nav-link" routerLink="/admin">Admin Board</a>
       </li>
@@ -29,4 +28,5 @@
         <a class="nav-link" (click)="logout()">LogOut</a>
       </li>
     </ul>
+    
   </nav>
