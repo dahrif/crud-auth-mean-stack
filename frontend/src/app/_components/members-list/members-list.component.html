@@ -19,9 +19,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMember(member, i)">
+        <tr *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMembers(member, i)">
           <td>{{ member.username}}</td>
           <td>{{ member.email}}</td>
+          <td>          <button class="btn" (click)="deleteMember()"> Delete </button></td>
           <!-- <td><a  class="badge badge-warning" routerLink="/members/{{ currentMember._id }}" > Edit </a></td> -->
         </tr>
       </tbody>

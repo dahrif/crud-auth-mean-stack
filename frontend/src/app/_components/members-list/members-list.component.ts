@@ -61,6 +61,20 @@ export class MembersListComponent implements OnInit {
   setActiveMembers(members: Member, index: number): void {
     this.currentMember = members;
     this.currentIndex = index;
+    console.log(members);
+    
+  }
+
+  deleteMember(): void {
+    this.memberService.delete(this.currentMember._id)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.router.navigate(['/members']);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
   removeAllMembers(): void {
@@ -90,5 +104,7 @@ export class MembersListComponent implements OnInit {
           console.log(error);
         });
   }
+
+
 
 }
