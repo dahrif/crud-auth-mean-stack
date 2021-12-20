@@ -1,11 +1,9 @@
 <div class="list row">
     <div class="col">
-        <div class="input-group mb-3">
+        <div class="input-group my-3">
             <input type="text" class="form-control" placeholder="Search by username" [(ngModel)]="username" />
             <div class="input-group-append">
               <button class="btn btn-outline-secondary" type="button" (click)="searchUsername()" > Search </button>
-            </div>
-            <div class="mx-5">            
             </div>
           </div>
     </div>
@@ -23,26 +21,25 @@
           <td>{{ member.username}}</td>
           <td>{{ member.email}}</td>
           <td> <button class="btn" (click)="deleteMember()"> Delete </button></td>
-          <!-- <td><a  class="badge badge-warning" routerLink="/members/{{ currentMember._id }}" > Edit </a></td> -->
         </tr>
       </tbody>
     </table>
 
-    <button class="m-3 btn btn-danger" (click)="removeAllMembers()">
+    <button class="my-1 btn btn-danger" (click)="removeAllMembers()">
       Remove All
     </button>
 
         <!-- Modal -->
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        <button type="button" class="my-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
           Edit
         </button>
   
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update member</h5>
+                <h5 class="modal-title" id="exampleModalLabel1">Update member</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -52,18 +49,18 @@
                     <div class="form-group">
                       <label for="username">Username</label>
                       <input type="text" class="form-control" id="username" required  [(ngModel)]="currentMember.username"
-                       name="username" value="currentMember.username"/>
+                       name="username" />
                     </div>
               
                     <div class="form-group">
                       <label for="email">email</label>
-                      <input class="form-control" id="email" required [(ngModel)]="currentMember.email" name="email" value="currentMember.email" />
+                      <input class="form-control" id="email" required [(ngModel)]="currentMember.email" name="email" />
                     </div>
               
                   </div>
       
                   <div >
-                    <button class="btn btn-secondary" (click)="updateMember()" data-bs-dismiss="modal">Save</button>
+                    <button class="btn btn-secondary my-2" (click)="updateMember()" data-bs-dismiss="modal">Save</button>
                   </div> 
       
                 </div>

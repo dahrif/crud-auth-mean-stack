@@ -3,7 +3,7 @@ import { Member } from 'src/app/_models/member.model';
 import { MemberService } from 'src/app/_services/member.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { UserService } from 'src/app/_services/user.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-members-list',
@@ -18,10 +18,13 @@ export class MembersListComponent implements OnInit {
   username = '';
   message = '';
 
-  constructor(private memberService: MemberService, private tokenStorageService: TokenStorageService,private userService: UserService,private router : Router) { }
+  constructor(private memberService: MemberService, private tokenStorageService: TokenStorageService,private userService: UserService,private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() : void{
     this.retrieveMembers();
+    this.getMember(this.route.snapshot.params._id);
+     
 
     this.currentMember = this.tokenStorageService.getUser();
 
@@ -34,6 +37,18 @@ export class MembersListComponent implements OnInit {
          return false
       }
     );
+  }
+
+  getMember(_id: string): void {
+    this.memberService.get(_id)
+      .subscribe(
+        data => {
+          this.currentMember = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
   logout(): void{
@@ -79,13 +94,13 @@ export class MembersListComponent implements OnInit {
   }
 
   updateMember(): void {
-    this.message = '';
 
     this.memberService.update(this.currentMember._id, this.currentMember)
       .subscribe(
         response => {
           console.log(response);
-          this.message = response.message ? response.message : 'This member was updated successfully!';
+          this.refreshList();
+
         },
         error => {
           console.log(error);
