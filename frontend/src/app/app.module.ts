@@ -16,7 +16,7 @@ import { AddMemberComponent } from './_components/add-member/add-member.componen
 import { MembersListComponent } from './_components/members-list/members-list.component';
 import { MemberDetailsComponent } from './_components/member-details/member-details.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
-
+import { UpdateMemberComponent } from './_components/update-member/update-member.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
     MembersListComponent,
     MemberDetailsComponent,
     NavbarComponent,
+    UpdateMemberComponent
   ],
   imports: [
     BrowserModule,

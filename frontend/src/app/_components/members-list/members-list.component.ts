@@ -16,6 +16,7 @@ export class MembersListComponent implements OnInit {
   currentMember: any;
   currentIndex = -1;
   username = '';
+  message = '';
 
   constructor(private memberService: MemberService, private tokenStorageService: TokenStorageService,private userService: UserService,private router : Router) { }
 
@@ -71,6 +72,20 @@ export class MembersListComponent implements OnInit {
         response => {
           console.log(response);
           this.refreshList();
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  updateMember(): void {
+    this.message = '';
+
+    this.memberService.update(this.currentMember._id, this.currentMember)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.message = response.message ? response.message : 'This member was updated successfully!';
         },
         error => {
           console.log(error);
