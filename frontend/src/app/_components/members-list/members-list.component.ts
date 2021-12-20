@@ -70,7 +70,7 @@ export class MembersListComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/members']);
+          this.refreshList();
         },
         error => {
           console.log(error);
