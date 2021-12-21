@@ -95,6 +95,8 @@ export class MembersListComponent implements OnInit {
 
   updateMember(): void {
 
+    this.message = '';
+
     this.memberService.update(this.currentMember._id, this.currentMember)
       .subscribe(
         response => {

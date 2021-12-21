@@ -13,27 +13,26 @@
         <tr>
           <th>Username</th>
           <th>Email</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMembers(member, i)">
           <td>{{ member.username}}</td>
           <td>{{ member.email}}</td>
-          <td> <button class="btn" (click)="deleteMember()"> Delete </button></td>
+
         </tr>
       </tbody>
     </table>
 
-    <button class="my-1 btn btn-danger" (click)="removeAllMembers()">
-      Remove All
-    </button>
 
         <!-- Modal -->
 
-        <button type="button" class="my-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-          Edit
-        </button>
+    <button type="button" class="my-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Edit member <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+
+    <button type="button" class="my-1 btn btn-outline-danger"  (click)="deleteMember()">Delete Member <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+
+        
+    <button class="my-1 btn btn-danger" (click)="removeAllMembers()"> Remove All </button>
   
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
           <div class="modal-dialog">
@@ -60,7 +59,7 @@
                   </div>
       
                   <div >
-                    <button class="btn btn-secondary my-2" (click)="updateMember()" data-bs-dismiss="modal">Save</button>
+                    <button class="btn btn-primary my-2" (click)="updateMember()" data-bs-dismiss="modal">Save changes</button>
                   </div> 
       
                 </div>
