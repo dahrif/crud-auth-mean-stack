@@ -78,6 +78,11 @@ export class MembersListComponent implements OnInit {
     this.currentMember = members;
     this.currentIndex = index;
     console.log(members);
+    let userName = document.querySelector('.username-inp') as HTMLInputElement;
+    userName.value = this.currentMember.username;
+
+    let Email = document.querySelector('.email-inp') as HTMLInputElement;
+    Email.value = this.currentMember.email;
     
   }
 
