@@ -17,6 +17,7 @@ import { MembersListComponent } from './_components/members-list/members-list.co
 import { MemberDetailsComponent } from './_components/member-details/member-details.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
 import { UpdateMemberComponent } from './_components/update-member/update-member.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UpdateMemberComponent } from './_components/update-member/update-member
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ AuthInterceptorProviders ],
   bootstrap: [AppComponent]
