@@ -1,6 +1,12 @@
 <app-navbar></app-navbar>
+
 <div class="container">
-    <header class="jumbotron">
-      <p>{{ content }}</p>
-    </header>
-  </div>
+  <div class="row">
+    <div class="card m-1" style="width: 30vw;" *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMembers(member, i)">
+      <div class="card-body">
+        <h4>Username: {{ member.username}}</h4>
+        <h5>Email: {{ member.email}}</h5>
+      </div>
+    </div>
+    </div>
+</div>

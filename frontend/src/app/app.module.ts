@@ -14,9 +14,7 @@ import { UserComponent } from './_components/user/user.component';
 import { AuthInterceptorProviders } from './_helpers/auth.interceptor';
 import { AddMemberComponent } from './_components/add-member/add-member.component';
 import { MembersListComponent } from './_components/members-list/members-list.component';
-import { MemberDetailsComponent } from './_components/member-details/member-details.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
-import { UpdateMemberComponent } from './_components/update-member/update-member.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -30,9 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserComponent,
     AddMemberComponent,
     MembersListComponent,
-    MemberDetailsComponent,
     NavbarComponent,
-    UpdateMemberComponent
   ],
   imports: [
     BrowserModule,

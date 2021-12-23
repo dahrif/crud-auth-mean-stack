@@ -95,7 +95,7 @@ exports.signin = (req, res) => {
     var authorities = [];
 
     for (let i = 0; i < user.roles.length; i++){
-      authorities.push("You are " + user.roles[i].name.toUpperCase());
+      authorities.push( user.roles[i].name.toUpperCase());
     }
 
     res.status(200).send({

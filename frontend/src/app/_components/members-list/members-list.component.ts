@@ -86,17 +86,19 @@ export class MembersListComponent implements OnInit {
     
   }
 
-  deleteMember(): void {
-    this.memberService.delete(this.currentMember._id)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.refreshList();
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  deleteMember(){
+    if(window.confirm('Are sure you want to delete this item ?')){
+      this.memberService.delete(this.currentMember._id)
+          .subscribe(
+            response => {
+              console.log(response);
+              this.refreshList();
+            },
+            error => {
+              console.log(error);
+            });
+   }
+}
 
   updateMember(): void {
 

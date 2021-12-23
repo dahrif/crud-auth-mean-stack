@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<div class="container text-center" *ngIf="currentUser; else loggedOut">
-  <div class="card m-3">
+<div class="container d-flex justify-content-center" *ngIf="currentUser; else loggedOut">
+  <div class="card m-3 text-center" style="width: 50vw;">
     <div class="card-header">
       <h3>
         <strong>{{ currentUser.username }}</strong>
@@ -12,11 +12,11 @@
         {{ currentUser.email }}
       </p>
       <strong>Roles:</strong>
-      <ul *ngFor="let role of currentUser.roles">
-        <li >
+      <p *ngFor="let role of currentUser.roles">
+
           {{ role }}
-        </li>
-      </ul>
+
+      </p>
     </div>
     
   </div>
