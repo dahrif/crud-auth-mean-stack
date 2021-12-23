@@ -18,40 +18,27 @@
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username" required minlength="6" [(ngModel)]="member.username" name="username"/>
-
-                <div class="text-danger" *ngIf="submitted && username.errors">
-                  <div *ngIf="username.errors.minlength">
-                    Password must be at least 6 characters
-                  </div>
-                </div>
               </div>
         
               <div class="form-group">
                 <label for="email">email</label>
-                <input class="form-control" id="email" required minlength="6" [(ngModel)]="member.email" name="email" />
-                <div class="text-danger" *ngIf="submitted && email.errors">
-                <div *ngIf="email.errors.minlength">
-                  Password must be at least 6 characters
-                </div>
-                </div>
+                <input type="email" class="form-control" id="email" required minlength="6" [(ngModel)]="member.email" name="email" />
+            
               </div>
       
               <div class="form-group">
                   <label for="password">password</label>
-                  <input class="form-control" id="password" required minlength="6" [(ngModel)]="member.password" name="password" />
-                  <div class="text-danger" *ngIf="submitted && username.errors">
-                  <div *ngIf="password.errors.minlength">
-                    Password must be at least 6 characters
-                  </div>
+                  <input type="password" class="form-control" id="password" required minlength="6" [(ngModel)]="member.password" name="password" />
                 </div>
+
+                <div *ngIf="!isFailed" class="text-danger">
+                  <h5>{{ errorMessage }}</h5>
                 </div>
         
               <button (click)="saveMember()" class="btn btn-success mt-2">Submit</button>
             </div>
 
-            <div *ngIf="!isFailed">
-              <h4>{{ errorMessage }}</h4>
-            </div>
+            
 
             <div *ngIf="submitted">
               <h4>Member was submitted successfully!</h4>

@@ -12,6 +12,8 @@ module.exports = app => {
       [
         verifySignUp.checkDuplicatedUsernameOrEmail,
       ],
+      controller.create
+
       );
     
       // Retrieve all members
