@@ -32,6 +32,5 @@ export class AdminComponent implements OnInit {
 
   logout(): void{
     this.tokenStorageService.signOut();
-    window.location.reload();
-  }
+    this.router.navigate(['/home'])  }
 }
