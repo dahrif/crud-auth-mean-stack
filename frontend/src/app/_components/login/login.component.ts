@@ -15,11 +15,15 @@ export class LoginComponent implements OnInit {
   
   form: any = {
     username: null,
+    email: null,
     password: null
   };
+
+  // isSuccessful = false;
+  // isSignUpFailed = false;
+  errorMessage = '';
   isLoggedIn = false;
   isLoginFailed = false;
-  errorMessage = '';
   roles: string[] = [];
 
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router : Router) { }
@@ -35,7 +39,8 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit(): void {
-    const { username, password } = this.form;
+    const { username, email, password } = this.form;
+
 
     this.authService.login(username, password).subscribe(
       data => {
@@ -44,7 +49,7 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        window.location.reload();
+        // window.location.reload();
         this.router.navigate(['/user'])
       },
       err => {
@@ -52,6 +57,20 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = true;
       }
     );
+
+    // this.authService.register(username, email, password)
+    // .subscribe(
+    //   data => {
+    //     console.log(data);
+    //     this.isSuccessful = true;
+    //     this.isSignUpFailed = false;
+    //   },
+    //   err => {
+    //     this.errorMessage = err.error.message;
+    //     this.isSignUpFailed = true;        
+    //   }
+    // );
+
   }
 
   

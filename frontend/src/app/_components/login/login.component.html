@@ -1,5 +1,35 @@
-<app-navbar></app-navbar>
-<div class="col-md-12">
+
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+		
+
+			<div class="login">
+        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate >
+					<label for="chk" aria-hidden="true">Login</label>
+          <input type="text" name="username" [(ngModel)]="form.username" required #username="ngModel" placeholder="Username" />
+          <div class="text-danger" *ngIf="username.errors && f.submitted" >
+            Username is required!
+          </div>
+
+          <input type="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" placeholder="Password" />
+          <div class="text-danger" role="alert" *ngIf="password.errors && f.submitted" >
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">
+              Password must be at least 6 characters
+            </div>
+          </div>
+          
+					<button>Login</button>
+				</form>
+			</div>
+
+      <div class="signup">
+        <app-register></app-register>
+			</div>
+	</div>
+
+<!-- <div class="col-md-12">
     <div class="contain">
       <header>Login</header>
       <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate >
@@ -38,4 +68,4 @@
         <h5>{{roles}}</h5>
       </div>
     </div>
-  </div>
+  </div> -->

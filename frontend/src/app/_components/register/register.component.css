@@ -1,83 +1,56 @@
-.text-danger{
-    color : #b52b65 !important;
-  }
-  
-  .contain {
-    font-family: 'M PLUS 1', sans-serif ;
-    background: rgba(3, 3, 55, 0.5);
-    width: 40vw;
-    height: 85vh;
-    margin: auto;
-    margin-top: 10px;
-  }
-  
-  header {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 3rem;
-    height: 3rem;
-    background: rgba(3, 3, 55, 0.7);
-    font-size: 1.4rem;
-    color: #d3d3d3;
-  }
-  
-  fieldset {
-    border: 0;
-    text-align: center;
-    padding-top: 25px;
-  }
-  
-  .submit {
-    background: #b52b65;
-    border: none;
-    display: block;
-    margin: 0 auto;
-    color: white;
-    cursor: pointer;
-    font-size: 1.2rem;
-    padding: 10px;
-    width: 70%;
-  }
-  
-  input {
-    background: transparent;
-    border: 0;
-    border-left: 4px solid;
-    padding: 10px;
-    color: white;
-    width: 70%;
-    margin: 15px;
-    border-left: 4px solid;
-    border-color: #b52b65;
-  }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    outline: 0;
-    background: rgba(235, 30, 54, 0.3);
-    border-radius: 1rem;
-    border-color: transparent;
-  }
-  
-  ::placeholder {
-    color: #d3d3d3;
-  }
-  
-  a{
-    color: #fff;
-  }
-  
-  /*Media queries */
-  @media (maX-width: 800px) {
-    .contain {
-        width: 80vw;
-        margin-bottom: 10%;
-    }
-  }
-    @media (min-width: 569px) and (max-width: 768px) {
-        .contain {
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
-    }
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+input{
+	width: 80vw;
+	background: #e0dede8c;
+	justify-content: center;
+	display: flex;
+	margin: 40px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+input:focus{
+  background: #e0dede;
+
+}
+button{
+	width: 80vw;
+	height: 50px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #6d44b8;
+}
+
+label{
+	color: #573b8a;
+	transform: scale(.6);
+}
