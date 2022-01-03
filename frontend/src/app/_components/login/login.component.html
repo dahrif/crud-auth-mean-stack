@@ -5,8 +5,9 @@
 		
 
 			<div class="login">
+        <label for="chk" aria-hidden="true">Login</label>
+
         <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate >
-					<label for="chk" aria-hidden="true">Login</label>
           <input type="text" name="username" [(ngModel)]="form.username" required #username="ngModel" placeholder="Username" />
           <div class="text-danger" *ngIf="username.errors && f.submitted" >
             Username is required!
@@ -25,6 +26,7 @@
 			</div>
 
       <div class="signup">
+        <label for="chk" aria-hidden="true">Sign up</label>
         <app-register></app-register>
 			</div>
 	</div>
