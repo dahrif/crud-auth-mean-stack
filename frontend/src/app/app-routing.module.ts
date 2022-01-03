@@ -5,13 +5,11 @@ import { UserComponent } from './_components/user/user.component';
 import { HomeComponent } from './_components/home/home.component';
 import { LoginComponent } from './_components/login/login.component';
 import { ProfileComponent } from './_components/profile/profile.component';
-import { RegisterComponent } from './_components/register/register.component';
 import { MembersListComponent } from './_components/members-list/members-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'user', component: UserComponent},
   { path: 'admin', component: AdminComponent},
