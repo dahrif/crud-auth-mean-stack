@@ -1,5 +1,5 @@
 <div class="list row">
-    <div class="col">
+    <div class="col p-0 ">
         <div class="input-group my-3">
             <input type="text" class="form-control" placeholder="Search by username" [(ngModel)]="username" />
             <div class="input-group-append">
@@ -8,7 +8,7 @@
           </div>
     </div>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-responsive">
       <thead>
         <tr>
           <th>Username</th>
@@ -17,7 +17,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let member of members; let i = index" [class.active]="i == currentIndex" (click)="setActiveMembers(member, i)">
-          <td>{{ member.username}}</td>
+          <td >{{ member.username}}</td>
           <td>{{ member.email}}</td>
 
         </tr>

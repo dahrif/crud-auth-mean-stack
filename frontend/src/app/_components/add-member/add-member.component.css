@@ -1,3 +1,9 @@
 .btn-primary{
     background: rgb(3, 3, 55);
 }
+
+@media only screen and (max-width: 600px){
+    .add{
+        margin-left: 10px;
+    }
+}

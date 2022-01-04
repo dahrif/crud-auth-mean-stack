@@ -2,6 +2,11 @@ tbody td {
     cursor: pointer;
 }
 
+/* tbody tr:focus-visible{
+    background: hotpink;
+} */
+
+
 .btn-danger{
     background: #b52b65;
 }
@@ -19,3 +24,9 @@ tbody td {
     background: #b52b65;
     color: #fff;
 }
+
+@media only screen and (max-width: 600px){
+    .list{
+        margin-left: 10px;
+    }
+}    
