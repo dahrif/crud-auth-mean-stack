@@ -1,5 +1,6 @@
 <div class="list row">
-    <div class="col p-0 ">
+  
+    <div class="col-8 p-0">
         <div class="input-group my-3">
             <input type="text" class="form-control" placeholder="Search by username" [(ngModel)]="username" />
             <div class="input-group-append">
@@ -7,8 +8,11 @@
             </div>
           </div>
     </div>
+    <div class="col-4 px-1 my-3">
+      <app-add-member></app-add-member>
+    </div>
 
-    <table class="table table-hover table-responsive">
+    <table class="table table-bordered table-hover table-responsive">
       <thead>
         <tr>
           <th>Username</th>
