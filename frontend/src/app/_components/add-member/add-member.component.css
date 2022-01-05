@@ -1,5 +1,9 @@
 .btn-primary{
-    background: rgb(3, 3, 55);
+    background: #000D69;
+}
+
+.btn-primary:hover{
+    background-color: #000c69d7;
 }
 
 @media only screen and (max-width: 600px){

@@ -12,7 +12,11 @@ tbody td {
 }
 
 .btn-primary{
-    background: rgb(3, 3, 55);
+    background: #000D69;
+}
+
+.btn-primary:hover{
+    background: #000D69e7;
 }
 
 .btn-outline-danger{

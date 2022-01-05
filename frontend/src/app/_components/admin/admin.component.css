@@ -82,7 +82,7 @@ opacity:1;
 }
 
 .main-menu {
-background:rgb(3, 3, 55, .8);
+background:#000c69d8;
 position:absolute;
 top:0;
 bottom:0;
@@ -141,7 +141,7 @@ font-family: 'Titillium Web', sans-serif;
 
 .link:hover {
   color:#fff;
-  background-color:#00bbbb;
+  background-color:#3C0022;
   text-shadow: 0px 0px 0px; 
   z-index: 3;
 }
@@ -170,12 +170,12 @@ nav ul li .profile{
 
 /* Darker element side menu Start*/
 .darkerli{
-background-color:rgb(3, 3, 55);;
+background-color:#000D69;
 text-transform:capitalize;  
 }
 
 .darkerlishadow{
-background-color:rgb(3, 3, 55);;
+background-color:#000D69;
 text-transform:capitalize;  
 -webkit-box-shadow: inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
 -moz-box-shadow:    inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
@@ -183,7 +183,7 @@ box-shadow:         inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
 }
 
 .darkerlishadowdown{
-background-color:rgb(3, 3, 55);;
+background-color:#000D69;
 text-transform:capitalize;  
 -webkit-box-shadow: inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 -moz-box-shadow:    inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
