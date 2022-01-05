@@ -4,10 +4,14 @@
 	height: 100vh;
 	background: red;
 	overflow: hidden;
-	background: url("https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/08/nature-design.jpg") no-repeat center/ cover;
-	border-radius: 10px;
+	background: url("https://images.pexels.com/photos/1964475/pexels-photo-1964475.jpeg?cs=srgb&dl=pexels-ricardo-esquivel-1964475.jpg&fm=jpg");
+	background-size:cover ;
+	background-attachment:fixed;
+	background-position: bottom 50rem;
 	box-shadow: 5px 20px 50px #000;
 }
+
+
 #chk{
 	display: none;
 }
