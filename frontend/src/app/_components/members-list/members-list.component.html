@@ -1,18 +1,18 @@
 <div class="list row">
   
-    <div class="col-8 p-0">
-        <div class="input-group my-3">
+    <div class="col-12 col-md-8 p-0">
+        <div class="input-group">
             <input type="text" class="form-control" placeholder="Search by username" [(ngModel)]="username" />
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" (click)="searchUsername()" > Search </button>
+              <button class="btn btn-outline-secondary" type="button" (click)="searchUsername()" ><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
           </div>
     </div>
-    <div class="col-4 px-1 my-3">
+    <div class="col-12 col-md-4 px-1">
       <app-add-member></app-add-member>
     </div>
 
-    <table class="table table-bordered table-hover table-responsive">
+    <table class="table table-bordered table-hover table-responsive mt-3">
       <thead>
         <tr>
           <th>Username</th>
@@ -31,9 +31,9 @@
 
         <!-- Modal -->
 
-    <button type="button" class="my-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Edit Member <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+    <button type="button" class="my-1 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
 
-    <button type="button" class="my-1 btn btn-outline-danger"  (click)="deleteMember()">Delete Member <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+    <button type="button" class="my-1 btn btn-outline-danger"  (click)="deleteMember()">Delete <i class="fa fa-trash-o" aria-hidden="true"></i></button>
 
         
     <button class="my-1 btn btn-danger" (click)="removeAllMembers()"> Delete All Members </button>
