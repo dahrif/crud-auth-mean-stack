@@ -1,6 +1,6 @@
 <div class="container">
 <div class="page-wrapper chiller-theme toggled">
-<nav class="main-menu">
+<nav class="fixed main-menu">
   <div>
      <a class="logo" href="">
      </a> 
@@ -16,14 +16,14 @@
   </li>  
 
  <li>                                   
- <a routerLink="/home">
+ <a class="link" routerLink="/home">
  <i class="fa fa-home fa-lg"></i>
  <span class="nav-text">Home</span>
  </a>
  </li>
      
  <li>                                 
- <a routerLink="/user">
+ <a class="link" routerLink="/user">
  <i class="fa fa-users fa-lg"></i>
  <span class="nav-text">Members</span>
  </a>
@@ -31,7 +31,7 @@
  
    
  <li class="darkerli">
-  <a href="">
+  <a class="link">
   <i class="fa fa-sign-out text-danger"></i>
   <span class="nav-text" (click)="logout()">Log Out</span>
   </a>
@@ -44,7 +44,7 @@
  <main class="page-content">
     <div class="row">
       <div class="col-lg-8 mx-auto">
-      <!-- <app-add-member></app-add-member> -->
+      <app-add-member></app-add-member>
       <app-members-list></app-members-list>
       </div>
   </div>
