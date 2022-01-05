@@ -39,6 +39,16 @@
   padding: 20px 40px;
 }
 
+.main-menu .logo {
+  position: relative;
+  display: block;
+  width: 250px;
+  border-bottom: 1px solid #fff;
+  height: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+
 ul li a:hover > i::before {
   display: inline-block;
   animation: swing ease-in-out 0.5s 1 alternate;
@@ -65,7 +75,7 @@ font-size:20px;
   margin: auto;
 }
 
-.main-menu:hover {
+.main-menu:hover{
 width:250px;
 overflow:hidden;
 opacity:1;

@@ -50,7 +50,10 @@ button:hover{
 	background: #6d44b8;
 }
 
-label{
-	color: #573b8a;
-	transform: scale(.6);
-}
+
+@media only screen and (min-width: 600px){
+    input, button{
+		width: 40vw;
+	}
+
+} 
