@@ -83,3 +83,10 @@ button:hover{
 #chk:checked ~ .login label{
 	transform: scale(.6);
 }
+
+
+@media only screen and (min-width: 600px){
+    input, button{
+		width: 40vw;
+	}
+ }
