@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
         this.content = data;
       },
       err => {
-        this.router.navigate(['/login'])
+        this.router.navigate(['/home'])
          return false
       }
     );

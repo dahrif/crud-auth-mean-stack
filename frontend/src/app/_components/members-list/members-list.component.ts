@@ -108,7 +108,7 @@ export class MembersListComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.refreshList();
+          window.location.reload();
 
         },
         error => {
