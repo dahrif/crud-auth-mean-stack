@@ -9,7 +9,7 @@
 
         <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate >
           <input type="text" name="username" [(ngModel)]="form.username" required #username="ngModel" placeholder="Username" />
-          <div class="text-danger" *ngIf="username.errors && f.submitted" >
+          <div class="text-danger te" *ngIf="username.errors && f.submitted" >
             Username is required!
           </div>
 

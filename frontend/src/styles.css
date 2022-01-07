@@ -8,3 +8,8 @@ body{
     overflow-x: hidden;
 
 }
+
+html{
+    margin: 0;
+    padding: 0;
+}
