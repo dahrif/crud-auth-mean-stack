@@ -10,7 +10,6 @@
 	box-shadow: 5px 20px 50px #000;
 }
 
-
 #chk{
 	display: none;
 }
@@ -66,7 +65,7 @@ button:hover{
 	background: #0014a7;
 }
 .signup{
-	height: 100vh;
+	height: 90vh;
 	background: #eee;
 	border-radius: 60% / 10%;
 	transform: translateY(-180px);
@@ -78,7 +77,7 @@ button:hover{
 }
 
 #chk:checked ~ .signup{
-	transform: translateY(-100vh);
+	transform: translateY(-90vh);
 }
 #chk:checked ~ .signup label{
 	transform: scale(1);	
@@ -90,6 +89,14 @@ button:hover{
 
 @media only screen and (min-width: 600px){
     input, button{
+		width: 35vw;
+	}
+	.main{
 		width: 40vw;
+		height: 80vh;
+		overflow: hidden;
+	}
+	.signup{
+		height: 100vh;
 	}
  }
