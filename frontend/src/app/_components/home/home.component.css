@@ -32,8 +32,9 @@ color: #000D69;
 }
 
 .login{
-  width: 40vw;
-  margin: 30px auto;
+  width: 30vw;
+  margin: auto;
+  padding: 0;
 }
 
 .intro_title {
@@ -83,6 +84,11 @@ color: #000D69;
     width: 100vw;
   }
 
-  
+  .footer{
+    position: fixed;
+    bottom: 0;
+  }
+
+
 
 } 
