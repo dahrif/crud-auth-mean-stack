@@ -17,18 +17,18 @@
             <div *ngIf="!submitted">
               <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" required minlength="6" [(ngModel)]="member.username" name="username"/>
+                <input type="text" class="form-control" id="addusername" required minlength="6" [(ngModel)]="member.username" name="username"/>
               </div>
         
               <div class="form-group">
                 <label for="email">email</label>
-                <input type="email" class="form-control" id="email" required minlength="6" [(ngModel)]="member.email" name="email" />
+                <input type="email" class="form-control" id="addemail" required minlength="6" [(ngModel)]="member.email" name="email" />
             
               </div>
       
               <div class="form-group">
                   <label for="password">password</label>
-                  <input type="password" class="form-control" id="password" required minlength="6" [(ngModel)]="member.password" name="password" />
+                  <input type="password" class="form-control" id="addpassword" required minlength="6" [(ngModel)]="member.password" name="password" />
                 </div>
 
                 <div *ngIf="!isFailed" class="text-danger">

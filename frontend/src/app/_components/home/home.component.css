@@ -32,9 +32,13 @@ color: #000D69;
 }
 
 .login{
-  width: 30vw;
+  background: url("../../../assets/img/pexels-bruno-thethe-1910236.jpg");
+  background-size:cover ;
+	background-attachment:fixed;
+  width: 35vw;
   margin: auto;
   padding: 0;
+  margin: 0;
 }
 
 .intro_title {
@@ -53,8 +57,8 @@ color: #000D69;
 
 .footer {
     padding: 1em;
-    margin: 2rem auto 0;
     background-color: #f8f8f8;
+    width: 100vw;
   }
  
   

@@ -1,11 +1,11 @@
 .main{
 	/* width: 100vw; */
-	height: 65vh;
+	height: 70vh;
 	overflow: hidden;
-	background: url("../../../assets/img/pexels-bruno-thethe-1910236.jpg");
-	background-size:cover ;
-	background-attachment:fixed;
-	box-shadow: 5px 20px 50px #000;
+	/* background: url("../../../assets/img/pexels-bruno-thethe-1910236.jpg"); */
+	/* background-size:cover ;
+	background-attachment:fixed; */
+	/* box-shadow: 5px 20px 50px #000; */
 }
 
 
@@ -65,9 +65,9 @@ button:hover{
 }
 .signup{
 	height: 100vh;
-	background: #eee;
+	background: #f8f8f8;
 	border-radius: 60% / 10%;
-	transform: translateY(-100px);
+	transform: translateY(-80px);
 	transition: .8s ease-in-out;
 }
 .signup label{
@@ -76,7 +76,7 @@ button:hover{
 }
 
 #chk:checked ~ .signup{
-	transform: translateY(-50vh);
+	transform: translateY(-67vh);
 }
 #chk:checked ~ .signup label{
 	transform: scale(1);	
@@ -92,11 +92,11 @@ button:hover{
 		width: 26vw;
 	}
 	.main{
-		height: 80vh;
+		height: 87vh;
 		margin: 0;
 	}
 	#chk:checked ~ .signup{
-		transform: translateY(-63vh);
+		transform: translateY(-70vh);
 	}
 
 }
@@ -105,12 +105,22 @@ button:hover{
 
  @media only screen and (max-width: 600px){
 
+	.login{
+		margin: 0;
+	}
+
 	.main{
 		width: 100vw;
+		height: 87vh;
 	}
 	input, button{
-		width: 80vw;
+		width: 90vw;
 	}
+
+	form{
+		margin-top: 80px;
+	}
+
 
 
  }
