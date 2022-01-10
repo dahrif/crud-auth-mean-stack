@@ -1,7 +1,7 @@
 {
-  "name": "login-tutorial-server-mongodb",
+  "name": "login-crud-server-mongodb",
   "version": "1.0.0",
-  "description": "Backend for login-tutorial using express and mongodb",
+  "description": "Backend for login-crud using express and mongodb",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
     "authentication",
     "mongodb"
   ],
-  "author": "bezkoder",
+  "author": "fatima",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
