@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:4200"
+  origin: "http://localhost:8100"
 }
 
 app.use(cors(corsOptions));
@@ -63,7 +63,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome from server."});
 });
 
-require('./app/routes/auth.routes')(app);
+// require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 require("./app/routes/members.routes")(app);
 

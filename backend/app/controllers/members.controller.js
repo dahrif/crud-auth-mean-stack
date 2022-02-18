@@ -9,6 +9,7 @@ exports.create = (req, res) => {
   const member = new Member({
     username: req.body.username,
     email: req.body.email,
+    name: req.body.name,
     password: bcrypt.hashSync(req.body.password, 8)
   });
 
